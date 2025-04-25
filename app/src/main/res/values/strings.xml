@@ -1,0 +1,115 @@
+<resources>
+    <string name="app_name">NaTour</string>
+    <string name="title_home">Home</string>
+    <string name="title_profilo">Profilo</string>
+    <string name="title_Aggiungi_itinerario">Aggiungi Itinerario</string>
+    <string name="label_Inserisci_itinerario">Inserisci nome itinerario</string>
+    <string name="Playlist">Playlist</string>
+    <string name="le_tue_playlist">Le tue Playlist</string>
+    <string name="label_cerca">Cerca</string>
+    <string name="label_cerca_itinerario">Cerca itinerario</string>
+    <string name="label_itinerario">Itinerario</string>
+    <string name="label_filtri">Filtri</string>
+    <string name="button_scrivi_recensione">Scrivi una recensione</string>
+    <string name="label_recensioni">Recensioni</string>
+
+
+    <!-- Label per radio button -->
+    <string name="label_radio_button_turistico">Turistico</string>
+    <string name="label_radio_button_escursionistico">Escursionistico</string>
+    <string name="label_radio_button_esperti">Esperti</string>
+    <string name="label_radio_button_esperti_attrezzati">Esperti attrezzati</string>
+    <string name="label_radio_button_innevato">Ambiente innevato</string>
+    <!-- ****************************************************************** -->
+
+    <!-- label di inserisci itinerario -->
+
+    <string name="label_nome_itinerario">Inserisci nome itinerario</string>
+    <string name="hint_nome_itinerario">Nome itinerario</string>
+    <string name="label_inserisci_punto_di_partenza">Inserisci punto di partenza</string>
+    <string name="hint_punto_di_partenza">Punto di partenza</string>
+    <string name="label_descrizione">Descrizione</string>
+    <string name="label_difficult">Difficoltà</string>
+    <string name="label_servizi_disabili">Servizi per disabili presenti</string>
+    <string name="label_durata_escursione">Durata escursione</string>
+    <string name="label_inserisci_tracciato">Inserisci tracciato</string>
+    <string name="label_google_maps">Google Maps</string>
+    <string name="label_GPX">GPX</string>
+    <string name="button_pubblica">Pubblica</string>
+
+    <!-- label login activity-->
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email_Username">Username o Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="Login_Button">Login</string>
+    <string name="Registrati_Label">Registrati</string>
+    <string name="welcome">Benvenuti in NaTour !</string>
+    <string name="non_registrato_label">Non sei ancora registrato?</string>
+    <string name="oppure_label">Oppure</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+
+    <!-- label Register Activity -->
+    <string name="email_edit_text">Email</string>
+    <string name="username_edit_text">Username</string>
+    <string name="conferma_password_edit_text">Conferma password</string>
+    <string name="data_di_nascita_label">Data di nascita</string>
+
+    <!-- label Segnalazione Activity -->
+    <string name="titolo_segnalazione_text">Titolo</string>
+    <string name="descrizione_segnalazione_text">Descrizione</string>
+    <string name="motivazione_segnalazione_text">Motivazione</string>
+    <string name="invia_segnalazione_button">Invia Segnalazione</string>
+    <string name="altro_radio_button">Altro</string>
+    <string name="informazioni_non_aggiornate_radio_button">Informazioni non aggiornate</string>
+    <string name="informazioni_inesatte_radio_button">Informazioni inesatte</string>
+
+    <!-- label Recensione Activity -->
+    <string name="esperienza_text">Vota la tua esperienza</string>
+    <string name="pubblica_recensione_button">Pubblica Recensione</string>
+
+    <!-- label CreaPlaylist Activity -->
+    <string name="crea_playlist_button">Crea playlist</string>
+    <string name="nome_playlist_text">Nome playlist</string>
+
+    <!-- label Profilo fragment -->
+    <string name="label_le_mie_playlist">Le mie playlist</string>
+    <string name="label_nome_profilo">%1</string>
+    <string name="label_i_miei_itinerari">I miei itinerari</string>
+    <string name="label_nome_Itinerario">%1</string>
+    <string name="label_item_descrizione">%1</string>
+    <string name="label_logout">Logout</string>
+
+
+    <!-- stringhe facebook login -->
+    <string name="title_activity_google_login">GoogleLogin</string>
+    <string name="prompt_email">Email</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+
+    <string name="aggiungi_alla_playlist">Aggiungi alla Playlist</string>
+    <string name="segnala">Segnala</string>
+    <string name="aggiorna_statistiche">Aggiorna statistiche</string>
+    <string name="utenti_iscritti">Utenti</string>
+    <string name="itinerari">Itinerari</string>
+    <string name="ricerche_effettuate">Ricerche</string>
+    <string name="accessi_effettuati">Accessi</string>
+    <string name="rispondi_alla_segnalazione">Rispondi alla segnalazione</string>
+    <string name="rispondi">Rispondi</string>
+    <string name="risultati_label">Risultati</string>
+    <string name="valutazione_mostra_itinerario">Valutazione</string>
+    <string name="statistiche">statistiche</string>
+    <string name="elimina_playlist">Elimina Playlist</string>
+    <string name="elimina_itinerario_dalla_playlist">Elimina itinerario dalla playlist</string>
+    <string name="default_notification_channel_id">default_notification_channel_id</string>
+    <string name="risposte_segnalazioni">Risposte segnalazioni</string>
+    <string name="richieste_effettuate">Richieste effettuate</string>
+    <string name="segnalazioni">Segnalazioni</string>
+    <string name="tempo_medio_risposta">Tempo medio Risposta</string>
+    <string name="tracciato_inserito">tracciato inserito</string>
+    <string name="okButtonRispostaSegn">OK</string>
+    <string name="titolo">Titolo:</string>
+
+
+</resources>

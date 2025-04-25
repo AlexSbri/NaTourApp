@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:foregroundTint="#000000">
+
+    <ImageView
+        android:id="@+id/imageViewProfilo"
+        android:layout_width="36sp"
+        android:layout_height="36sp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:adjustViewBounds="false"
+        android:cropToPadding="false"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/viewstroke"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:roundPercent="1"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+
+        android:id="@+id/imageViewItinerarioHomeItem"
+        android:layout_width="184dp"
+        android:layout_height="179dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitoloItinerarioHomeItem"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/textViewUsernameHomeItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/viewstroke"
+        app:layout_constraintStart_toEndOf="@+id/imageViewProfilo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.428" />
+
+    <TextView
+        android:id="@+id/textViewTitoloItinerarioHomeItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8sp"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewstroke" />
+
+    <TextView
+        android:id="@+id/textViewDescrizioneHomeItem"
+        android:layout_width="175dp"
+        android:layout_height="71dp"
+        android:lines="3"
+        android:paddingStart="2sp"
+        android:paddingEnd="2sp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageViewItinerarioHomeItem"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitoloItinerarioHomeItem" />
+
+
+    <TextView
+        android:id="@+id/textViewDifficultLabelHometItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="@string/label_difficult"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/imageViewItinerarioHomeItem"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDescrizioneHomeItem" />
+
+    <View
+        android:id="@+id/viewstroke"
+        android:layout_width="match_parent"
+        android:layout_height="1sp"
+        android:background="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageFilterButtonMenuHomeItem" />
+
+    <View
+        android:id="@+id/view3"
+        android:layout_marginTop="10sp"
+        android:layout_width="match_parent"
+        android:layout_height="1sp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPosizioneItinerarioHomeItem" />
+
+    <ImageView
+        android:id="@+id/imageViewWheelChair"
+        android:layout_width="48sp"
+        android:layout_height="48sp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.694"
+        app:layout_constraintStart_toEndOf="@+id/textViewDifficultIndicator"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDifficultLabelHometItem"
+        />
+
+    <RatingBar
+        android:id="@+id/ratingBarHomeItem"
+        style="@style/ratingstarcustom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:isIndicator="true"
+        app:layout_constraintEnd_toStartOf="@+id/textViewNumeroRecensioni"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/imageViewItinerarioHomeItem"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDifficultIndicator" />
+
+    <TextView
+        android:id="@+id/textViewNumeroRecensioni"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDifficultIndicator" />
+
+    <TextView
+        android:id="@+id/textViewPosizioneItinerarioHomeItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:text="Presso Monte Taburno, Italia"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewItinerarioHomeItem" />
+
+    <ImageView
+        android:id="@+id/imageFilterViewPinImage"
+        android:layout_width="46dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.071"
+        app:layout_constraintStart_toEndOf="@+id/textViewPosizioneItinerarioHomeItem"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewItinerarioHomeItem"
+        app:srcCompat="@drawable/ic_location_pin" />
+
+    <TextView
+        android:id="@+id/textViewDifficultIndicator"
+        android:layout_width="131dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/imageViewItinerarioHomeItem"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDifficultLabelHometItem" />
+
+    <ImageButton
+        android:id="@+id/imageFilterButtonMenuHomeItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#00FFFFFF"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.918"
+        app:layout_constraintStart_toEndOf="@+id/textViewUsernameHomeItem"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_dot_menu" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

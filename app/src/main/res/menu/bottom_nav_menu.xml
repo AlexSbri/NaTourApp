@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="@string/title_home" />
+
+    <item android:id="@+id/navigation_search"
+        android:icon="@drawable/ic_baseline_search_24"
+        android:title="@string/label_cerca"
+    />
+
+    <item
+        android:id="@+id/navigation_aggiungi_itinerario"
+        android:icon="@drawable/ic_baseline_add_box_24"
+        android:title="@string/label_itinerario"
+        />
+
+    <item
+        android:id="@+id/navigation_playlist"
+        android:icon="@drawable/ic_baseline_playlist_play_24"
+        android:title="@string/Playlist" />
+
+    <item
+        android:id="@+id/navigation_profilo"
+        android:icon="@drawable/ic_baseline_account_circle_24"
+        android:title="@string/title_profilo" />
+</menu>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.segnalazione.risposta_segnalazione.RispostaSegnalazioneActivity">
+
+    <TextView
+        android:id="@+id/textViewRispondiSegnalazione"
+        android:layout_width="331dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="76dp"
+        android:text="@string/rispondi_alla_segnalazione"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextRispostaSegnalazione"
+        android:layout_width="340dp"
+        android:layout_height="137dp"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/text_field_custom"
+        android:ems="10"
+        android:gravity="top|start"
+        android:inputType="textMultiLine"
+        android:lines="4"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:textCursorDrawable="@drawable/cursor_custom"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewRispondiSegnalazione" />
+
+    <Button
+        android:id="@+id/buttonRispondiSegnalazione"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/rispondi"
+        android:textColor="#212121"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextRispostaSegnalazione"
+        app:layout_constraintVertical_bias="0.292" />
+</androidx.constraintlayout.widget.ConstraintLayout>

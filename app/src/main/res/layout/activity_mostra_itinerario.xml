@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.mostra_itinerario.MostraItinerarioActivity">
+
+    <ScrollView
+        android:id="@+id/scrollViewMostraItinerario"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.gms.maps.MapView
+                android:id="@+id/mapView"
+                android:layout_width="0dp"
+                android:layout_height="250sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageViewIsSegnalato"
+                android:layout_width="39dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.94"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_baseline_warning_24" />
+
+            <TextView
+                android:layout_marginTop="12sp"
+                android:id="@+id/textViewDifficultMostraItinerario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@string/label_difficult"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/textViewDurataMostraItinerario"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mapView" />
+
+            <TextView
+                android:layout_marginTop="12sp"
+                android:id="@+id/textViewDurataMostraItinerario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="128dp"
+                android:text="@string/label_durata_escursione"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mapView" />
+
+            <TextView
+                android:id="@+id/textViewDifficultMostraItinerarioContent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewDifficultMostraItinerario" />
+
+            <TextView
+                android:id="@+id/textViewDurata"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="112dp"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toStartOf="@+id/imageViewServiziDisabili"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/textViewDifficultMostraItinerarioContent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewDurataMostraItinerario" />
+            <View
+                android:id="@+id/viewstroke"
+                android:layout_width="0dp"
+                android:layout_height="1sp"
+                android:layout_marginBottom="28dp"
+                android:background="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mapView" />
+
+            <View
+                android:id="@+id/viewstroke2"
+                android:layout_width="0dp"
+                android:layout_height="1sp"
+                android:layout_marginBottom="28dp"
+                android:background="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewDescrizioneMostraItinerario" />
+
+            <View
+                android:id="@+id/viewstroke3"
+                android:layout_width="0dp"
+                android:layout_height="1sp"
+                android:background="@color/black"
+                app:layout_constraintBottom_toTopOf="@+id/RecyclerViewMostraItinerario"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/buttonScriviRecensione" />
+
+            <ImageView
+                android:id="@+id/imageViewServiziDisabili"
+                android:layout_width="53dp"
+                android:layout_height="47dp"
+                android:layout_marginTop="44dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.871"
+                app:layout_constraintStart_toEndOf="@+id/textViewDurataMostraItinerario"
+                app:layout_constraintTop_toBottomOf="@+id/mapView"
+                />
+
+            <TextView
+                android:id="@+id/textViewPuntoPartenzaMostraItinerario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="140dp"
+                android:layout_marginTop="30sp"
+                android:text="@string/hint_punto_di_partenza"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewDifficultMostraItinerarioContent" />
+
+            <TextView
+                android:id="@+id/textViewPuntoPartenzaContentMostraItinerario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4sp"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewPuntoPartenzaMostraItinerario" />
+
+            <RatingBar
+                android:id="@+id/ratingBarValutazione"
+                android:layout_width="243dp"
+                android:layout_height="51dp"
+                android:layout_marginStart="80dp"
+                android:isIndicator="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewValutazione" />
+
+            <TextView
+                android:id="@+id/textViewValutazione"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="160dp"
+                android:layout_marginTop="30sp"
+                android:text="@string/valutazione_mostra_itinerario"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewPuntoPartenzaContentMostraItinerario" />
+
+            <TextView
+                android:id="@+id/textViewNumeroRecensioniMostraItinerario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="70sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.178"
+                app:layout_constraintStart_toEndOf="@+id/ratingBarValutazione"
+                app:layout_constraintTop_toBottomOf="@+id/textViewPuntoPartenzaContentMostraItinerario" />
+
+            <TextView
+                android:id="@+id/textViewDescrizioneLabelMostraItinerario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="160dp"
+                android:layout_marginTop="30sp"
+                android:text="@string/label_descrizione"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ratingBarValutazione" />
+
+            <TextView
+                android:id="@+id/textViewDescrizioneMostraItinerario"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:lines="5"
+                android:paddingStart="10sp"
+                android:paddingEnd="10sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewDescrizioneLabelMostraItinerario" />
+
+            <Button
+                android:id="@+id/buttonScriviRecensione"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12sp"
+                android:layout_marginEnd="12sp"
+                android:text="@string/button_scrivi_recensione"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewDescrizioneMostraItinerario" />
+
+            <TextView
+                android:id="@+id/textViewRecensioneMostraItinerario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22sp"
+                android:text="@string/label_recensioni"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toStartOf="@+id/buttonScriviRecensione"
+                app:layout_constraintHorizontal_bias="0.365"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewDescrizioneMostraItinerario" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/RecyclerViewMostraItinerario"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+
+    <fragment
+        android:id="@+id/navigation_search"
+        android:name="com.example.natourapp.ui.cerca.CercaFragment"
+        android:label="@string/label_cerca"
+        tools:layout="@layout/cerca_fragment">
+        <action
+            android:id="@+id/action_navigation_search_to_searchResultFragment"
+            app:destination="@id/searchResultFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/navigation_search" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.natourapp.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/navigation_aggiungi_itinerario"
+        android:name="com.example.natourapp.ui.aggiungi_itinerario.AggiungiItinerarioFragment"
+        android:label="@string/title_Aggiungi_itinerario"
+
+        tools:layout="@layout/aggiungi_itinerario_fragment" >
+        <action
+            android:id="@+id/action_navigation_aggiungi_itinerario_to_mapsFragment"
+            app:destination="@id/mapsFragment"
+           />
+        <argument
+            android:name="path"
+            android:defaultValue=""
+            app:argType="string"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_playlist"
+        android:name="com.example.natourapp.ui.playlist.PlaylistFragment"
+        android:label="@string/le_tue_playlist"
+        tools:layout="@layout/playlist_fragment">
+        <action
+            android:id="@+id/action_navigation_playlist_to_mostraPlaylistFragment"
+            app:destination="@id/mostraPlaylistFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/navigation_playlist" />
+        <action
+            android:id="@+id/action_navigation_playlist_to_creaPlaylistFragment"
+            app:destination="@id/creaPlaylistFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/navigation_playlist" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_profilo"
+        android:name="com.example.natourapp.ui.profilo.ProfiloFragment"
+        android:label="@string/title_profilo"
+        tools:layout="@layout/profilo_fragment" >
+        <action
+            android:id="@+id/action_navigation_profilo_to_segnalazioniRicevuteFragment"
+            app:destination="@id/segnalazioniRicevuteFragment" />
+        <action
+            android:id="@+id/action_navigation_profilo_to_segnalazioneEffettuateFragment"
+            app:destination="@id/segnalazioneEffettuateFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mostraPlaylistFragment"
+        android:label="{nomePlaylist}"
+        android:name="com.example.natourapp.ui.playlist.mostra_playlist.MostraPlaylistFragment"
+        tools:layout="@layout/mostra_playlist_fragment">
+        <argument
+            android:name="nomePlaylist"
+            android:defaultValue="Nome playlist"
+            app:argType="string" />
+        <argument
+            android:name="idPlaylist"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/creaPlaylistFragment"
+        android:name="com.example.natourapp.ui.playlist.CreaPlaylistFragment"
+        android:label="@string/crea_playlist_button"
+        tools:layout="@layout/fragment_crea_playlist" />
+    <fragment
+        android:id="@+id/searchResultFragment"
+        android:name="com.example.natourapp.ui.cerca.SearchResultFragment"
+        android:label="@string/risultati_label"/>
+    <fragment
+        android:id="@+id/mapsFragment"
+        android:name="com.example.natourapp.ui.aggiungi_itinerario.MapsFragment"
+        android:label="fragment_maps"
+        tools:layout="@layout/fragment_maps" >
+        <action
+            android:id="@+id/action_mapsFragment_to_navigation_aggiungi_itinerario"
+            app:destination="@id/navigation_aggiungi_itinerario" />
+        <argument
+            android:name="userLat"
+            app:argType="float"
+            android:defaultValue="0" />
+        <argument
+            android:name="userLng"
+            app:argType="float"
+            android:defaultValue="0" />
+    </fragment>
+    <fragment
+        android:id="@+id/segnalazioniRicevuteFragment"
+        android:name="com.example.natourapp.ui.profilo.segnalazioni_ricevute.SegnalazioniRicevuteFragment"
+        android:label="SegnalazioniRicevuteFragment" >
+        <argument
+            android:name="itinerario_id"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/segnalazioneEffettuateFragment"
+        android:name="com.example.natourapp.ui.profilo.segnalazioni_effettuate.SegnalazioneEffettuateFragment"
+        android:label="SegnalazioneEffettuateFragment" />
+</navigation>
